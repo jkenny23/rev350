@@ -1,0 +1,47 @@
+# version
+# Betaflight / SPEEDYBEEF7 (SBF7) 4.1.0 Oct 21 2019 / 10:02:25 (c37a7c91a) MSP API: 1.42
+
+# start the command batch
+batch start
+
+board_name SPEEDYBEEF7
+
+# feature
+feature -RX_SERIAL
+feature RX_PARALLEL_PWM
+feature LED_STRIP
+
+# serial
+serial 0 0 115200 57600 0 115200
+serial 1 64 115200 57600 0 115200
+
+# led
+led 0 6,12::CTOBVIW:0
+led 1 7,12::CTOBVIW:0
+led 2 8,12::CTOBVIW:0
+led 3 9,12::CTOBVIW:0
+
+# master
+set acc_calibration = 55,-42,-22
+set bat_capacity = 6000
+set vbat_max_cell_voltage = 420
+set osd_vbat_pos = 2496
+set osd_remaining_time_estimate_pos = 2432
+set osd_crosshairs_pos = 2253
+set osd_ah_sbar_pos = 2254
+set osd_ah_pos = 2126
+set osd_gps_speed_pos = 2073
+set osd_gps_lon_pos = 2536
+set osd_gps_lat_pos = 2504
+set osd_gps_sats_pos = 2553
+set osd_home_dir_pos = 2065
+set osd_home_dist_pos = 2060
+set osd_compass_bar_pos = 2410
+set osd_altitude_pos = 2240
+set osd_warnings_pos = 14752
+set osd_avg_cell_voltage_pos = 2528
+set osd_esc_tmp_pos = 2520
+
+profile 0
+
+rateprofile 0
