@@ -1,35 +1,32 @@
 # version
-# Betaflight / SPEEDYBEEF7 (SBF7) 4.1.0 Oct 21 2019 / 10:02:25 (c37a7c91a) MSP API: 1.42
+# Betaflight / STM32F7X2 (S7X2) 4.2.6 Jan  5 2021 / 19:08:42 (a4b6db1e7) MSP API: 1.43
+# config: manufacturer_id: SPBE, board_name: SPEEDYBEEF7, version: 6fac4231, date: 2019-10-18T22:07:46Z
 
 # start the command batch
 batch start
 
 board_name SPEEDYBEEF7
+manufacturer_id SPBE
+
+# name: KJ6KST
 
 # feature
 feature -RX_SERIAL
 feature RX_PARALLEL_PWM
 feature LED_STRIP
 
-# serial
-serial 0 0 115200 57600 0 115200
-serial 1 64 115200 57600 0 115200
-
-# led
-led 0 6,12::CTOBVIW:0
-led 1 7,12::CTOBVIW:0
-led 2 8,12::CTOBVIW:0
-led 3 9,12::CTOBVIW:0
-
 # master
-set acc_calibration = 55,-42,-22
-set bat_capacity = 6000
+set acc_calibration = 11,-13,-3,1
+set bat_capacity = 6700
 set vbat_max_cell_voltage = 420
 set osd_vbat_pos = 2496
-set osd_remaining_time_estimate_pos = 2432
+set osd_remaining_time_estimate_pos = 2488
 set osd_crosshairs_pos = 2253
 set osd_ah_sbar_pos = 2254
 set osd_ah_pos = 2126
+set osd_current_pos = 2432
+set osd_mah_drawn_pos = 2464
+set osd_craft_name_pos = 2048
 set osd_gps_speed_pos = 2073
 set osd_gps_lon_pos = 2536
 set osd_gps_lat_pos = 2504
@@ -38,10 +35,15 @@ set osd_home_dir_pos = 2065
 set osd_home_dist_pos = 2060
 set osd_compass_bar_pos = 2410
 set osd_altitude_pos = 2240
-set osd_warnings_pos = 14752
+set osd_warnings_pos = 14729
 set osd_avg_cell_voltage_pos = 2528
+set osd_nvario_pos = 2262
 set osd_esc_tmp_pos = 2520
+set name = KJ6KST
 
 profile 0
 
 rateprofile 0
+
+# end the command batch
+batch end
