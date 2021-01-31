@@ -21,11 +21,21 @@ feature LED_STRIP
 # serial
 serial 2 0 19200 57600 0 115200
 
+# led
+led 0 4,15::CW:0
+led 1 5,15::L:0
+led 2 6,15::L:0
+led 3 7,15::L:0
+led 4 8,15::L:0
+led 5 9,15::L:0
+led 6 10,15::L:0
+led 7 11,15::A:0
+
 # aux
 aux 0 0 0 1800 2050 0 0
 
 # master
-set acc_calibration = -10,143,4,1
+set acc_calibration = -11,29,8,1
 set rc_smoothing_auto_smoothness = 20
 set serialrx_provider = IBUS
 set bat_capacity = 6700
@@ -61,6 +71,19 @@ set feedforward_transition = 40
 set iterm_relax_cutoff = 10
 set yaw_lowpass_hz = 70
 set throttle_boost_cutoff = 10
+set p_pitch = 32
+set i_pitch = 63
+set d_pitch = 27
+set f_pitch = 67
+set p_roll = 29
+set i_roll = 59
+set d_roll = 25
+set f_roll = 63
+set p_yaw = 31
+set i_yaw = 63
+set f_yaw = 63
+set d_min_roll = 16
+set d_min_pitch = 18
 set ff_interpolate_sp = AVERAGED_3
 set ff_spike_limit = 55
 set ff_smooth_factor = 40
