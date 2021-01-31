@@ -10,13 +10,23 @@ manufacturer_id SPBE
 
 # name: KJ6KST
 
+# resources
+resource MOTOR 1 C09
+resource MOTOR 2 C06
+resource MOTOR 4 C07
+
 # feature
-feature -RX_SERIAL
-feature RX_PARALLEL_PWM
 feature LED_STRIP
 
+# serial
+serial 2 0 19200 57600 0 115200
+
+# aux
+aux 0 0 0 1800 2050 0 0
+
 # master
-set acc_calibration = 11,-13,-3,1
+set acc_calibration = -10,143,4,1
+set serialrx_provider = IBUS
 set bat_capacity = 6700
 set vbat_max_cell_voltage = 420
 set osd_vbat_pos = 2496
